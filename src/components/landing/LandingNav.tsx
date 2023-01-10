@@ -22,10 +22,10 @@ const navLinks: NavItemProps[] = [
 const LandingNav = () => {
 	return (
 		<nav className="bg-transparent fitted z-20 absolute h-12 flex-btw centered">
-			<div className="curp">
+			<div className="curp pl-5 lg:pl-0">
 				<img src="/assets/images/landing/logo.png" alt="logo" width={80} />
 			</div>
-			<ul className="bg-transparent flex items-center space-x-10">
+			<ul className="bg-transparent hidden lg:flex items-center space-x-10">
 				{navLinks.map(({ title, className, onClick }: NavItemProps) => (
 					<li
 						key={title}

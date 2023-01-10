@@ -28,11 +28,11 @@ const destinations: DestinationProps[] = [
 
 const TopDestinations = () => {
 	return (
-		<section className="w-full py-20 bwite">
+		<section className="w-full py-10 lg:py-20 bwite">
 			<div className="w-full flex items-center justify-end">
 				<div className="w-full flexed flex-col mb-5">
 					<p className="smb lt-txt mb-4 font-pop">Top Selling</p>
-					<h3 className="smb twide lg:text-4xl">Top Destinations</h3>
+					<h3 className="smb twide text-2xl lg:text-4xl">Top Destinations</h3>
 				</div>
 			</div>
 			<div className="centered mx-auto flect lg:justify-between pt-8">

@@ -3,7 +3,7 @@ import { BsPlayFill } from "react-icons/bs";
 const HeroSection = () => {
 	return (
 		<section className="bwite pt-8 pb-16 lg:pt-12 centered">
-			<div className="absolute right-0 top-0 h-[500px] w-[500px] z-10">
+			<div className="hidden lg:absolute right-0 top-0 h-[500px] w-[500px] z-10">
 				<img src="/assets/images/landing/hero-layer.png" alt="layer" />
 			</div>
 			<div className="absolute left-0 top-0 h-[400px] w-[150px]">
@@ -13,15 +13,17 @@ const HeroSection = () => {
 					className="h-full"
 				/>
 			</div>
-			<div className="w-full mx-auto flex-btw pt-20">
-				<div className="">
-					<h5 className="font-pop font-bold text-[#DF6951] mb-5">
+			<div className="w-full mx-auto flex-wrap lg:flex-nowrap md:flex-btw pt-20">
+				<div className="px-8 lg:px-0">
+					<h5 className="font-pop font-bold text-[#DF6951] mb-5 tcent lg:text-left">
 						BEST DESTINATIONS AROUND THE WORLD
 					</h5>
 					<div>
-						<h3 className="font-bold relative lg:text-[72px] lg:w-[80%] leading-[72px] text-[#181E4B]">
+						<h3
+							className="font-bold relative text-3xl lg:text-[72px]
+						lg:w-[80%] tcent lg:text-left leading-[40px] lg:leading-[72px] text-[#181E4B]">
 							Travel, enjoy and live a new and full life
-							<span className="absolute right-10 top-16">
+							<span className="hidden lg:absolute right-10 top-16">
 								<img
 									src="/assets/images/landing/underlay.png"
 									alt="underlay"
@@ -36,7 +38,7 @@ const HeroSection = () => {
 						</p>
 					</div>
 				</div>
-				<div className="z-50 relative">
+				<div className="z-50 relative mb-8 lg:mb-0">
 					<img
 						src="/assets/images/landing/plane.png"
 						alt="plane"
@@ -47,7 +49,7 @@ const HeroSection = () => {
 						src="/assets/images/landing/plane.png"
 						alt="plane"
 						width={70}
-						className="absolute -right-6 top-12"
+						className="hidden lg:absolute -right-6 top-12"
 					/>
 					<img
 						src="/assets/images/landing/hero-image.png"
@@ -56,7 +58,7 @@ const HeroSection = () => {
 					/>
 				</div>
 			</div>
-			<div className="flect">
+			<div className="flect pl-8 lg:pl-0">
 				<button
 					style={{
 						boxShadow: "0px 20px 35px rgba(241, 165, 1, 0.15)",

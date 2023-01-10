@@ -32,7 +32,7 @@ const OngoingTrip = () => (
 			boxShadow:
 				"0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481)",
 		}}
-		className="absolute right-8 bottom-16 flex items-start bwite py-3 px-6 rounded-xl">
+		className="absolute z-[60] right-8 bottom-16 flex items-start bwite py-3 px-6 rounded-xl">
 		<div className="flexed mr-3">
 			<img
 				src="/assets/images/landing/rome-trip-img.png"
@@ -57,29 +57,29 @@ const OngoingTrip = () => (
 const NextTrip = () => {
 	return (
 		<div className="centered relative flect md:justify-between py-10 lg:py-16 bwite">
-			<img
-				src="assets/images/landing/bookmark-eclipse.png"
-				alt="eclipse"
-				className="-zs-[1] absolute -right-2 -top-[10px]"
-				width={200}
-			/>
 			<div className="w-full md:w-2/4">
-				<h5 className="mb-5 med font-pop lt-txt lg:text-lg">Easy and Fast</h5>
-				<p className="mb-14 text-[#14183E] text-xl lg:text-[58px] lg:leading-[65px] font-bold">
+				<h5 className="mb-5 med font-pop lt-txt text-lg tcent lg:text-left">
+					Easy and Fast
+				</h5>
+				<p className="mb-14 text-[#14183E] tcent lg:text-left text-3xl lg:text-[58px] lg:leading-[65px] font-bold">
 					Book Your Next Trip In 3 Easy Steps
 				</p>
 				<div className="flex flex-col">
 					{tripSteps.map(({ title, imgPath }: StepProps) => (
-						<div key={title} className="mb-10">
+						<div key={title} className="mb-10 px-7 lg:px-0">
 							<div className="flect">
 								<div className="mr-5">
-									<img src={imgPath} alt={title} width={100} />
+									<img
+										src={imgPath}
+										alt={title}
+										className="w-[140px] lg:w-[100px]"
+									/>
 								</div>
 								<div>
 									<h5 className="mb-1 lt-txt font-bold font-pop tracking-wide">
 										{title}
 									</h5>
-									<p className="mb-0 font-pop lt-txt">
+									<p className="mb-0 font-pop lt-txt text-justify lg:text-left pr-7 lg:pr-0">
 										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 										Esse, omnis! soluta odio odit numquam optio, culpa
 										voluptatibus?
@@ -91,19 +91,20 @@ const NextTrip = () => {
 				</div>
 			</div>
 
-			<div className="w-full md:w-2/4 flexed relative">
+			<div className="w-full md:w-2/4 hidden lg:flexed relative">
+				<img
+					src="assets/images/landing/bookmark-eclipse.png"
+					alt="eclipse"
+					width={500}
+					className="absolute right-2 -top-[140px]"
+				/>
 				<OngoingTrip />
 				<div
 					style={{
 						boxShadow:
 							"0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481)",
 					}}
-					className="w-[300px] bwitep-2 rounded-3xl flex flex-col px-5">
-					{/* <img
-						src="assets/images/landing/bookmark-eclipse.png"
-						alt="eclipse"
-						className="-z-[1] absolute -right-28 -top-[130px]"
-					/> */}
+					className="w-[300px] bwite z-50 p-2 rounded-3xl flex flex-col px-5">
 					<div className="w-full">
 						<img src="assets/images/landing/booking-card-img.jpeg" alt="lady" />
 					</div>
