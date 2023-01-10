@@ -1,4 +1,4 @@
-import React from "react";
+import { FiHeart } from "react-icons/fi";
 
 type StepProps = {
 	imgPath: string;
@@ -20,10 +20,50 @@ const tripSteps: StepProps[] = [
 	},
 ];
 
+const actionItems = [
+	"/assets/images/landing/leaf.png",
+	"/assets/images/landing/location.png",
+	"/assets/images/landing/send.png",
+];
+
+const OngoingTrip = () => (
+	<div
+		style={{
+			boxShadow:
+				"0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481)",
+		}}
+		className="absolute right-8 bottom-16 flex items-start bwite py-3 px-6 rounded-xl">
+		<div className="flexed mr-3">
+			<img
+				src="/assets/images/landing/rome-trip-img.png"
+				alt="rome"
+				className="h-10 w-10 rounded-full"
+			/>
+		</div>
+		<div className="">
+			<p className="mb-1 text-xs text-[#84829A]">Ongoing</p>
+			<p className="mb-1 text-sm font-pop med">Trip to Rome</p>
+			<p className="mb-1 mt-2 text-xs font-pop med">
+				<span className="text-[#8A79DF]">40%</span> completed
+			</p>
+
+			<div className="w-full h-2 mt-2 bg-[#F5F5F5] rounded-xl">
+				<div className="h-full w-2/5 bg-[#8A79DF] rounded-xl" />
+			</div>
+		</div>
+	</div>
+);
+
 const NextTrip = () => {
 	return (
-		<div className="centered flect md:justify-between py-10 lg:py-16 bwite">
-			<div className="w-full bred md:w-2/4">
+		<div className="centered relative flect md:justify-between py-10 lg:py-16 bwite">
+			<img
+				src="assets/images/landing/bookmark-eclipse.png"
+				alt="eclipse"
+				className="-zs-[1] absolute -right-2 -top-[10px]"
+				width={200}
+			/>
+			<div className="w-full md:w-2/4">
 				<h5 className="mb-5 med font-pop lt-txt lg:text-lg">Easy and Fast</h5>
 				<p className="mb-14 text-[#14183E] text-xl lg:text-[58px] lg:leading-[65px] font-bold">
 					Book Your Next Trip In 3 Easy Steps
@@ -50,14 +90,45 @@ const NextTrip = () => {
 					))}
 				</div>
 			</div>
-			<div className="w-full bred md:w-2/4 flexed">
-				<div className="hs-[350px] w-[300px] bwite p-2 rounded-xl flex flex-col relative bred">
+
+			<div className="w-full md:w-2/4 flexed relative">
+				<OngoingTrip />
+				<div
+					style={{
+						boxShadow:
+							"0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481)",
+					}}
+					className="w-[300px] bwitep-2 rounded-3xl flex flex-col px-5">
+					{/* <img
+						src="assets/images/landing/bookmark-eclipse.png"
+						alt="eclipse"
+						className="-z-[1] absolute -right-28 -top-[130px]"
+					/> */}
 					<div className="w-full">
 						<img src="assets/images/landing/booking-card-img.jpeg" alt="lady" />
 					</div>
 					<div className="py-5">
 						<p className="mb-3 med font-pop text-[#080809]">Trip To Greece</p>
-						<p className="mb-3">asdasd</p>
+						<p className="mb-3 text-[#84829A]">14-29 June | by Robbin joseph</p>
+						<div className="flex items-center space-x-4">
+							{actionItems.map((item, idx) => (
+								<div
+									className="h-9 w-9 flexed rounded-full bg-gray-200 lift"
+									key={idx}>
+									<img src={item} alt="icon" />
+								</div>
+							))}
+						</div>
+
+						<div className="w-full flex-btw items-center mt-6">
+							<div className="flect">
+								<img src="assets/images/landing/abstract.png" alt="abstract" />
+								<p className="mb-0 text-sm ml-2 text-[#84829A]">
+									24 people going
+								</p>
+							</div>
+							<FiHeart className="text-lg text-[#4152CA] lift" />
+						</div>
 					</div>
 				</div>
 			</div>

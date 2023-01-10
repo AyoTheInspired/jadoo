@@ -21,6 +21,10 @@
 		@apply text-[#5E6282];
 	}
 
+	.lift {
+		@apply curp hover:scale-110 transition-transform;
+	}
+
 	.flex-btw {
 		@apply flex items-center justify-between;
 	}

@@ -18,22 +18,22 @@ const HeroSection = () => {
 					<h5 className="font-pop font-bold text-[#DF6951] mb-5">
 						BEST DESTINATIONS AROUND THE WORLD
 					</h5>
-					<div className="relative">
-						<h3 className="font-bold lg:text-[65px] leading-[72px] text-[#181E4B]">
+					<div>
+						<h3 className="font-bold relative lg:text-[72px] lg:w-[80%] leading-[72px] text-[#181E4B]">
 							Travel, enjoy and live a new and full life
+							<span className="absolute right-10 top-16">
+								<img
+									src="/assets/images/landing/underlay.png"
+									alt="underlay"
+									width={280}
+								/>
+							</span>
 						</h3>
-						<p className="my-5 font-pop lt-txt med leading-7">
+						<p className="my-5 font-pop lt-txt med leading-7 lg:w-3/5">
 							Built Wicket longer admire do barton vanity itself do in it.
 							Preferred to sportsmen it engrossed listening. Park gate sell they
 							west hard for the.
 						</p>
-						<div className="absolute -right-2 top-16">
-							<img
-								src="/assets/images/landing/underlay.png"
-								alt="underlay"
-								width={280}
-							/>
-						</div>
 					</div>
 				</div>
 				<div className="z-50 relative">
