@@ -8,7 +8,7 @@ type ServiceProps = {
 };
 
 const Services = () => {
-	const isMobile = window && window.innerWidth < 430;
+	// const isMobile = window && window.innerWidth < 430;
 
 	const services: ServiceProps[] = [
 		{
