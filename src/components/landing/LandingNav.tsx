@@ -22,7 +22,7 @@ const navLinks: NavItemProps[] = [
 
 const LandingNav = () => {
 	return (
-		<nav className="bg-transparent z-20 absolute h-12 flex-btw centered">
+		<nav className="bg-transparent fitted z-20 absolute h-12 flex-btw centered">
 			<div className="curp">
 				<img src="/assets/images/landing/logo.png" alt="logo" width={80} />
 			</div>

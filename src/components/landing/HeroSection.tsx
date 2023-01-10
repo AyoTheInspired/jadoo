@@ -1,11 +1,8 @@
-import React from "react";
 import { BsPlayFill } from "react-icons/bs";
-import LandingNav from "./LandingNav";
 
 const HeroSection = () => {
 	return (
-		<section className="min-h-screen bg-white pt-8 lg:pt-12 bgrn centered">
-			{/* <LandingNav /> */}
+		<section className="bwite pt-8 pb-16 lg:pt-12 centered">
 			<div className="absolute right-0 top-0 h-[500px] w-[500px] z-10">
 				<img src="/assets/images/landing/hero-layer.png" alt="layer" />
 			</div>
@@ -68,7 +65,7 @@ const HeroSection = () => {
 					Find out more
 				</button>
 
-				<div className="flect">
+				<div className="flect curp">
 					<button
 						style={{
 							boxShadow: "0px 15px 30px rgba(223, 105, 81, 0.3)",

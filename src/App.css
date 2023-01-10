@@ -6,7 +6,10 @@
 
 * {
 	font-family: "Volkhov", serif;
-	/* background-color: #fff; */
+}
+
+.destination-image {
+	width: 85vw;
 }
 
 @layer components {
@@ -42,7 +45,19 @@
 		@apply font-medium;
 	}
 
+	.bwite {
+		@apply bg-white;
+	}
+
+	.smb {
+		@apply font-semibold;
+	}
+
 	.centered {
 		@apply w-full lg:w-5/6;
+	}
+
+	.fitted {
+		@apply max-w-[1440px] mx-auto;
 	}
 }

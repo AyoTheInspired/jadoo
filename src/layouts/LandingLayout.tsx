@@ -1,11 +1,17 @@
-import { HeroSection, LandingNav, Services } from "../components";
+import {
+	HeroSection,
+	LandingNav,
+	Services,
+	TopDestinations,
+} from "../components";
 
 const LandingLayout = () => {
 	return (
-		<main className="relatives pt-5 lg:pt-10 flex items-center flex-col">
+		<main className="pt-5 lg:pt-10 flex items-center flex-col">
 			<LandingNav />
 			<HeroSection />
 			<Services />
+			<TopDestinations />
 		</main>
 	);
 };
