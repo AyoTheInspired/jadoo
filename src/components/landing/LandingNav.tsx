@@ -26,7 +26,7 @@ const LandingNav = () => {
 			<div className="curp">
 				<img src="/assets/images/landing/logo.png" alt="logo" width={80} />
 			</div>
-			<ul className="bg-transparent flex items-center space-x-8">
+			<ul className="bg-transparent flex items-center space-x-10">
 				{navLinks.map(({ title, className, onClick }: NavItemProps) => (
 					<li
 						key={title}

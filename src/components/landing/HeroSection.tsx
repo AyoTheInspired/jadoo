@@ -1,9 +1,10 @@
 import React from "react";
+import { BsPlayFill } from "react-icons/bs";
 import LandingNav from "./LandingNav";
 
 const HeroSection = () => {
 	return (
-		<section className="min-h-screen ws-full bg-white pt-8 lg:pt-12 bgrn centered">
+		<section className="min-h-screen bg-white pt-8 lg:pt-12 bgrn centered">
 			{/* <LandingNav /> */}
 			<div className="absolute right-0 top-0 h-[500px] w-[500px] z-10">
 				<img src="/assets/images/landing/hero-layer.png" alt="layer" />
@@ -15,7 +16,69 @@ const HeroSection = () => {
 					className="h-full"
 				/>
 			</div>
-			HeroSection
+			<div className="w-full mx-auto flex-btw pt-20">
+				<div className="">
+					<h5 className="font-pop font-bold text-[#DF6951] mb-5">
+						BEST DESTINATIONS AROUND THE WORLD
+					</h5>
+					<div className="relative">
+						<h3 className="font-bold lg:text-[65px] leading-[72px] text-[#181E4B]">
+							Travel, enjoy and live a new and full life
+						</h3>
+						<p className="my-5 font-pop text-[#5E6282] med leading-7">
+							Built Wicket longer admire do barton vanity itself do in it.
+							Preferred to sportsmen it engrossed listening. Park gate sell they
+							west hard for the.
+						</p>
+						<div className="absolute -right-2 top-16">
+							<img
+								src="/assets/images/landing/underlay.png"
+								alt="underlay"
+								width={280}
+							/>
+						</div>
+					</div>
+				</div>
+				<div className="z-50 relative">
+					<img
+						src="/assets/images/landing/plane.png"
+						alt="plane"
+						width={70}
+						className="absolute left-20 top-1"
+					/>
+					<img
+						src="/assets/images/landing/plane.png"
+						alt="plane"
+						width={70}
+						className="absolute -right-6 top-12"
+					/>
+					<img
+						src="/assets/images/landing/hero-image.png"
+						alt="lady"
+						width={1000}
+					/>
+				</div>
+			</div>
+			<div className="flect">
+				<button
+					style={{
+						boxShadow: "0px 20px 35px rgba(241, 165, 1, 0.15)",
+					}}
+					className="outline-none font-pop med bg-[#F1A501] px-4 py-2 rounded-md text-white">
+					Find out more
+				</button>
+
+				<div className="flect">
+					<button
+						style={{
+							boxShadow: "0px 15px 30px rgba(223, 105, 81, 0.3)",
+						}}
+						className="outline-none ml-7 flexed font-pop med bg-[#DF6951] h-7 w-7 rounded-full text-white">
+						<BsPlayFill />
+					</button>{" "}
+					<span className="text-[#686D77] font-pop med ml-2">Play Demo</span>
+				</div>
+			</div>
 		</section>
 	);
 };
