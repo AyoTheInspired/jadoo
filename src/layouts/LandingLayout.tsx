@@ -1,6 +1,7 @@
 import {
 	HeroSection,
 	LandingNav,
+	NextTrip,
 	Services,
 	TopDestinations,
 } from "../components";
@@ -12,6 +13,7 @@ const LandingLayout = () => {
 			<HeroSection />
 			<Services />
 			<TopDestinations />
+			<NextTrip />
 		</main>
 	);
 };

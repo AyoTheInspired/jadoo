@@ -13,7 +13,7 @@ const destinations: DestinationProps[] = [
 		days: 10,
 	},
 	{
-		imgPath: "/assets/images/landing/dest2.jpeg",
+		imgPath: "/assets/images/landing/dest1.png",
 		location: "London, UK",
 		price: 4.2,
 		days: 12,
@@ -31,7 +31,7 @@ const TopDestinations = () => {
 		<section className="w-full py-20 bwite">
 			<div className="w-full flex items-center justify-end">
 				<div className="w-full flexed flex-col mb-5">
-					<p className="smb text-[#5E6282] mb-4 font-pop">Top Selling</p>
+					<p className="smb lt-txt mb-4 font-pop">Top Selling</p>
 					<h3 className="smb twide lg:text-4xl">Top Destinations</h3>
 				</div>
 			</div>
@@ -39,14 +39,10 @@ const TopDestinations = () => {
 				{destinations.map(
 					({ imgPath, location, price, days }: DestinationProps) => (
 						<div
-							className="flexed flex-col bg-red-400 shadow-lg rounded-xl"
+							className="flex flex-col bg-red-400 shadow-lg lg:w-2/6 rounded-xl relative"
 							key={location}>
 							<div className="">
-								<img
-									src={imgPath}
-									alt={location}
-									className="destination-image"
-								/>
+								<img src={imgPath} alt={location} className="" />
 							</div>
 							<div className="bwite p-3 min-w-full rounded-br-xl rounded-bl-xl bred mt-auto font-mono">
 								<div className="flex-btw font-pop">

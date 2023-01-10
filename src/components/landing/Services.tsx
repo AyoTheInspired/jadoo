@@ -44,7 +44,7 @@ const Services = () => {
 		<section className="w-full pb-8 lg:pb-14 font-pop">
 			<div className="w-full flex items-center justify-end">
 				<div className="w-full flexed flex-col mb-5">
-					<p className="smb text-[#5E6282] mb-4">CATEGORY</p>
+					<p className="smb lt-txt mb-4">CATEGORY</p>
 					<h3 className="smb twide lg:text-4xl">We Offer Best Services</h3>
 				</div>
 				<img
@@ -77,9 +77,7 @@ const Services = () => {
 							className={style ? "mb-1.5" : "mb-5"}
 						/>
 						<h6 className="med mb-2">{title}</h6>
-						<p className="mb-0 med text-[#5E6282] tcent text-sm w-3/5">
-							{subtitle}
-						</p>
+						<p className="mb-0 med lt-txt tcent text-sm w-3/5">{subtitle}</p>
 					</div>
 				))}
 			</div>

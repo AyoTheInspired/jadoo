@@ -22,7 +22,7 @@ const HeroSection = () => {
 						<h3 className="font-bold lg:text-[65px] leading-[72px] text-[#181E4B]">
 							Travel, enjoy and live a new and full life
 						</h3>
-						<p className="my-5 font-pop text-[#5E6282] med leading-7">
+						<p className="my-5 font-pop lt-txt med leading-7">
 							Built Wicket longer admire do barton vanity itself do in it.
 							Preferred to sportsmen it engrossed listening. Park gate sell they
 							west hard for the.

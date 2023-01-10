@@ -8,13 +8,17 @@
 	font-family: "Volkhov", serif;
 }
 
-.destination-image {
-	width: 85vw;
-}
+/* .destination-image {
+	width: 55vw;
+} */
 
 @layer components {
 	.flexed {
 		@apply flex items-center justify-center;
+	}
+
+	.lt-txt {
+		@apply text-[#5E6282];
 	}
 
 	.flex-btw {

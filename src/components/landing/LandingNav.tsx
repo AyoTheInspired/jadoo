@@ -17,7 +17,6 @@ const navLinks: NavItemProps[] = [
 		className: "border border-black rounded-md px-5 py-1.5",
 		onClick: () => console.log("Login"),
 	},
-	// { title: "Login", onClick: () => console.log("Login") },
 ];
 
 const LandingNav = () => {
