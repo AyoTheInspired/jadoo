@@ -6,6 +6,7 @@ module.exports = {
 			fontFamily: {
 				pop: "'Poppins', serif",
 				osans: "'Open Sans', serif",
+				serat: "'Montserrat', serif",
 			},
 		},
 	},

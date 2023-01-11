@@ -37,13 +37,18 @@ const TopDestinations = () => {
 					<h3 className="smb twide text-2xl lg:text-4xl">Top Destinations</h3>
 				</div>
 			</div>
-			<div className="centered mx-auto flect flex-wrap lg:flex-nowrap px-10 lg:px-0 md:justify-between pt-8">
+			<div className="centered mx-auto flect flex-wrap lg:flex-nowrap px-10 lg:px-0 md:justify-between relative pt-8">
+				<img
+					src="/assets/images/landing/spiral.png"
+					alt="spiral"
+					className="hidden lg:block lg:absolute -right-12 bottom-8"
+				/>
 				{destinations.map(
 					({ imgPath, location, price, days }: DestinationProps) => (
 						<div
-							className="flex flex-col w-full md:w-[40%] md:mx-auto lg:w-[30%] lift destination-wrapper mb-10 lg:mb-0"
+							className="flex flex-col w-full md:w-[40%] md:mx-auto lg:w-[30%] destination-wrapper mb-10 lg:mb-0"
 							key={location}>
-							<div className="h-[350px] ">
+							<div className="h-[350px]">
 								<img
 									src={imgPath}
 									alt={location}
@@ -57,7 +62,6 @@ const TopDestinations = () => {
 								</div>
 								<div className="flect mt-2.5 mb-3">
 									<IoIosSend className="text-[#080809] text-xl mr-2" />
-
 									<p className="mb-0 lt-txt">{days} Days Trip</p>
 								</div>
 							</div>

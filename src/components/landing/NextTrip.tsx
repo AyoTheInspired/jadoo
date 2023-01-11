@@ -61,7 +61,7 @@ const NextTrip = () => {
 				<h5 className="mb-5 med font-pop lt-txt text-lg tcent lg:text-left ">
 					Easy and Fast
 				</h5>
-				<p className="mb-14 text-[#14183E] tcent pl-5 md:pl-8 lg:pl-0 lg:text-left text-3xl lg:text-[58px] lg:leading-[65px] font-bold">
+				<p className="mb-14 text-[#14183E] tcent px-5 md:px-8 lg:px-0 lg:text-left text-3xl lg:text-[58px] lg:leading-[65px] font-bold">
 					Book Your Next Trip In 3 Easy Steps
 				</p>
 				<div className="flex flex-col">
@@ -96,7 +96,7 @@ const NextTrip = () => {
 					src="assets/images/landing/bookmark-eclipse.png"
 					alt="eclipse"
 					width={500}
-					className="hidden md:absolute right-2 -top-[140px]"
+					className="hidden md:block md:absolute right-2 -top-[140px]"
 				/>
 				<OngoingTrip />
 				<div
