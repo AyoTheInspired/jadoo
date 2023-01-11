@@ -3,7 +3,7 @@ import { BsPlayFill } from "react-icons/bs";
 const HeroSection = () => {
 	return (
 		<section className="bwite pt-8 pb-16 lg:pt-12 centered">
-			<div className="hidden lg:absolute right-0 top-0 h-[500px] w-[500px] z-10">
+			<div className="hidden lg:block lg:absolute right-0 top-0 h-[500px] w-[500px] z-10">
 				<img src="/assets/images/landing/hero-layer.png" alt="layer" />
 			</div>
 			<div className="absolute left-0 top-0 h-[400px] w-[150px]">
@@ -23,7 +23,7 @@ const HeroSection = () => {
 							className="font-bold relative text-3xl lg:text-[72px]
 						lg:w-[80%] tcent lg:text-left leading-[40px] lg:leading-[72px] text-[#181E4B]">
 							Travel, enjoy and live a new and full life
-							<span className="hidden lg:absolute right-10 top-16">
+							<span className="hidden lg:block lg:absolute right-10 top-16">
 								<img
 									src="/assets/images/landing/underlay.png"
 									alt="underlay"
@@ -49,7 +49,7 @@ const HeroSection = () => {
 						src="/assets/images/landing/plane.png"
 						alt="plane"
 						width={70}
-						className="hidden lg:absolute -right-6 top-12"
+						className="hidden lg:block lg:absolute -right-6 top-12"
 					/>
 					<img
 						src="/assets/images/landing/hero-image.png"
