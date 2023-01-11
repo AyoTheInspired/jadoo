@@ -3,6 +3,7 @@ import {
 	LandingNav,
 	NextTrip,
 	Services,
+	Testimonials,
 	TopDestinations,
 } from "../components";
 
@@ -14,6 +15,7 @@ const LandingLayout = () => {
 			<Services />
 			<TopDestinations />
 			<NextTrip />
+			<Testimonials />
 		</main>
 	);
 };
