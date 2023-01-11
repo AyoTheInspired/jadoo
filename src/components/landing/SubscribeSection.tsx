@@ -1,4 +1,4 @@
-import React from "react";
+import useToolkit from "../../utils/hooks/useToolkit";
 
 const partnerImages = [
 	"/assets/images/landing/axon.png",
@@ -9,13 +9,16 @@ const partnerImages = [
 ];
 
 const SubscribeSection = () => {
+	const { useAppSelector } = useToolkit();
+	const { text } = useAppSelector((state) => state.auth);
+
 	return (
-		<section className="centered pb-10 lg:pb-14">
+		<section className="centered pb-10 lg:pb-14 relative">
 			<img
 				src="/assets/images/landing/subscribe-decor.png"
 				alt="decor"
 				width={150}
-				className="hidden lg:block lg:absolute right-0 bottom-0"
+				className="hidden lg:block lg:absolute -right-24 bottom-0"
 			/>
 
 			<div className="my-8 lg:my-14 flexed space-x-5 md:space-x-0 space-y-5 lg:space-y-0 lg:justify-between flex-wrap">
@@ -59,7 +62,7 @@ const SubscribeSection = () => {
 					className="hidden lg:block lg:absolute top-0 right-0"
 				/>
 
-				<p className="mb-8 lt-txt lg:text-2xl smb lg:w-2/4 tcent font-pop">
+				<p className="mb-8 lt-txt lg:text-2xl smb lg:w-2/4 tcent font-pop px-7 lg:px-0">
 					Subscribe to get information, latest news, and other interesting
 					offers about Cobham
 				</p>

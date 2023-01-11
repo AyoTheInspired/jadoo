@@ -5,3 +5,8 @@ export { default as TopDestinations } from "./landing/TopDestinations";
 export { default as NextTrip } from "./landing/NextTrip";
 export { default as Testimonials } from "./landing/Testimonials";
 export { default as SubscribeSection } from "./landing/SubscribeSection";
+export { default as Footer } from "./landing/Footer";
+export { default as CenterModal } from "./misc/CenterModal";
+
+// hooks
+export { default as useToolkit } from "../utils/hooks/useToolkit";

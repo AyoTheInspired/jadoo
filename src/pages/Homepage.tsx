@@ -6,6 +6,7 @@ import {
 	Testimonials,
 	TopDestinations,
 	SubscribeSection,
+	Footer,
 } from "../components";
 
 const Homepage = () => {
@@ -18,6 +19,7 @@ const Homepage = () => {
 			<NextTrip />
 			<Testimonials />
 			<SubscribeSection />
+			<Footer />
 		</main>
 	);
 };
