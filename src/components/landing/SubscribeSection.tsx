@@ -1,5 +1,3 @@
-import useToolkit from "../../utils/hooks/useToolkit";
-
 const partnerImages = [
 	"/assets/images/landing/axon.png",
 	"/assets/images/landing/jesta.png",
@@ -9,9 +7,6 @@ const partnerImages = [
 ];
 
 const SubscribeSection = () => {
-	const { useAppSelector } = useToolkit();
-	const { text } = useAppSelector((state) => state.auth);
-
 	return (
 		<section className="centered pb-10 lg:pb-14 relative">
 			<img

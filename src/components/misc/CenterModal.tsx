@@ -40,7 +40,9 @@ const CenterModal = ({
 					<div className="p-6">
 						<div className="flex-btw mb-5">
 							{title && (
-								<p className="font-semibold mb-0 tracking-wider">{title}</p>
+								<p className="font-semibold mb-0 tracking-wider font-pop">
+									{title}
+								</p>
 							)}
 						</div>
 						{children}

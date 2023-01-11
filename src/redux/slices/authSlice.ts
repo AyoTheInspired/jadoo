@@ -2,12 +2,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface userState {
 	user: null | any;
-	text: string;
+	isLoginModalOpen: boolean;
 }
 
 const initialState: userState = {
 	user: null,
-	text: "global",
+	isLoginModalOpen: false,
 };
 
 const authSlice = createSlice({
@@ -20,9 +20,23 @@ const authSlice = createSlice({
 				user: payload,
 			};
 		},
+
+		logoutUser: (state) => {
+			return {
+				...state,
+				state: null,
+			};
+		},
+
+		toggleLoginModal: (state) => {
+			return {
+				...state,
+				isLoginModalOpen: !state.isLoginModalOpen,
+			};
+		},
 	},
 });
 
-export const { setUser } = authSlice.actions;
+export const { setUser, logoutUser, toggleLoginModal } = authSlice.actions;
 
 export default authSlice.reducer;

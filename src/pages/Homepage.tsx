@@ -7,20 +7,25 @@ import {
 	TopDestinations,
 	SubscribeSection,
 	Footer,
+	LoginModal,
 } from "../components";
 
 const Homepage = () => {
 	return (
-		<main className="pt-5 lg:pt-10 flex items-center flex-col">
-			<LandingNav />
-			<HeroSection />
-			<Services />
-			<TopDestinations />
-			<NextTrip />
-			<Testimonials />
-			<SubscribeSection />
-			<Footer />
-		</main>
+		<>
+			<main className="pt-5 lg:pt-10 flex items-center flex-col">
+				<LandingNav />
+				<HeroSection />
+				<Services />
+				<TopDestinations />
+				<NextTrip />
+				<Testimonials />
+				<SubscribeSection />
+				<Footer />
+			</main>
+
+			<LoginModal />
+		</>
 	);
 };
 
