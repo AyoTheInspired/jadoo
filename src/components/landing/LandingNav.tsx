@@ -1,28 +1,9 @@
 import { BsChevronDown } from "react-icons/bs";
-import { toggleLoginModal } from "../../redux/slices/authSlice";
 import useToolkit from "../../utils/hooks/useToolkit";
-
-type NavItemProps = {
-	title: string;
-	className?: string;
-	onClick?: () => void;
-};
+import { NavItemProps } from "../../../types";
 
 const LandingNav = () => {
-	const { dispatch } = useToolkit();
-
-	const navLinks: NavItemProps[] = [
-		{ title: "Destinations" },
-		{ title: "Hotels" },
-		{ title: "Flights" },
-		{ title: "Bookings" },
-		{ title: "Login", onClick: () => dispatch(toggleLoginModal()) },
-		{
-			title: "Sign up",
-			className: "border border-black rounded-md px-5 py-1.5",
-			onClick: () => console.log("Login"),
-		},
-	];
+	const { navLinks } = useToolkit();
 
 	return (
 		<nav className="bg-transparent fitted z-20 absolute h-12 flex-btw centered">

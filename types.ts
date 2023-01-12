@@ -1,5 +1,5 @@
 export type NavItemProps = {
-	title: string | JSX.Element;
+	title: string;
 	className?: string;
 	onClick?: () => void;
 };

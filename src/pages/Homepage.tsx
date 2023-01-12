@@ -8,6 +8,7 @@ import {
 	SubscribeSection,
 	Footer,
 	LoginModal,
+	RegisterModal,
 } from "../components";
 
 const Homepage = () => {
@@ -23,7 +24,7 @@ const Homepage = () => {
 				<SubscribeSection />
 				<Footer />
 			</main>
-
+			<RegisterModal />
 			<LoginModal />
 		</>
 	);

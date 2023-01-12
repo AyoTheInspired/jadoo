@@ -1,16 +1,16 @@
 import { ChangeEvent } from "react";
-import { CenterModal, useAuth, useToolkit } from "../../components";
-import { flipAuthModals, toggleLoginModal } from "../../redux/slices/authSlice";
+import { CenterModal, useAuth, useToolkit } from "..";
+import { flipAuthModals, toggleRegModal } from "../../redux/slices/authSlice";
 
 type ErrorProps = {
 	email: string | null;
 	password: string | null;
 };
 
-const LoginModal = () => {
-	const { useAppSelector, dispatch, useEffect, useState } = useToolkit();
-	const { isLoginModalOpen } = useAppSelector((state) => state.auth);
-	const { loginUser, authLoading } = useAuth();
+const RegModal = () => {
+	const { useAppSelector, dispatch, useState } = useToolkit();
+	const { isRegModalOpen } = useAppSelector((state) => state.auth);
+	const { registerUser, authLoading } = useAuth();
 
 	const initialValues = { email: "", password: "" };
 	const [formValues, setFormValues] = useState(initialValues);
@@ -29,7 +29,9 @@ const LoginModal = () => {
 		e.preventDefault();
 		setFormErrors(validate(formValues));
 
-		if (email?.length && password?.length) loginUser(email, password);
+		if (formErrors.email === null && formErrors.password === null)
+			console.log("formErrors :>> ", formErrors);
+		registerUser(email, password);
 	};
 
 	const validate = (values: ErrorProps) => {
@@ -38,26 +40,25 @@ const LoginModal = () => {
 			password: null,
 		};
 		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-		if (!values.password) {
-			errors.password = "Password is required";
-		}
 		if (!values.email) {
 			errors.email = "Email is required!";
 		} else if (!regex.test(values.email)) {
-			errors.email = "Invalid Email!";
+			errors.email = "This is not a valid email format!";
 		}
-		// if (!values.password) {
-		// 	errors.password = "Password is required";
-		// }
+		if (!values.password) {
+			errors.password = "Password is required";
+		} else if (values.password.length !== 6) {
+			errors.password = "Password must be 6 characters";
+		}
 		return errors;
 	};
 
 	return (
 		<CenterModal
 			darkBg
-			title="Login to your account"
-			control={isLoginModalOpen}
-			onClose={() => dispatch(toggleLoginModal())}>
+			title="Create acccount"
+			control={isRegModalOpen}
+			onClose={() => dispatch(toggleRegModal())}>
 			<div className="w-full font-pop">
 				<form onSubmit={handleSubmit}>
 					<div className="space-y-7">
@@ -89,16 +90,16 @@ const LoginModal = () => {
 							<p className="mb-0 mt-3">Loading...</p>
 						) : (
 							<button className="disabled:cursor-not-allowed outline-none bg-orange-400 font-pop med px-4 py-2 rounded-md text-white active:scale-90 transition-transform">
-								Login
+								Register
 							</button>
 						)}
 
 						<p className="my-3 lt-txt text-lg font-pop">
-							Don't have an account? &nbsp;
+							Already have an account? &nbsp;
 							<span
 								onClick={() => dispatch(flipAuthModals())}
 								className="underline smb text-black">
-								Register
+								Login
 							</span>
 						</p>
 					</div>
@@ -108,4 +109,4 @@ const LoginModal = () => {
 	);
 };
 
-export default LoginModal;
+export default RegModal;

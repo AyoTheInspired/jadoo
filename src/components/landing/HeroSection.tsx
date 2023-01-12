@@ -1,6 +1,9 @@
 import { BsPlayFill } from "react-icons/bs";
+import useToolkit from "../../utils/hooks/useToolkit";
 
 const HeroSection = () => {
+	const { user } = useToolkit();
+
 	return (
 		<section className="bwite pt-8 pb-16 lg:pt-12 centered">
 			<div className="hidden lg:block lg:absolute right-0 top-0 h-[500px] w-[500px] z-10">
@@ -15,6 +18,8 @@ const HeroSection = () => {
 			</div>
 			<div className="w-full mx-auto flex-wrap lg:flex-nowrap md:flex-btw pt-20">
 				<div className="px-8 lg:px-0">
+					{user && <p className="my-3 text-sm lt-txt">Welcome, {user}.</p>}
+
 					<h5 className="font-pop font-bold text-[#DF6951] mb-5 tcent lg:text-left">
 						BEST DESTINATIONS AROUND THE WORLD
 					</h5>
