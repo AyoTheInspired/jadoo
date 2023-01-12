@@ -1,5 +1,4 @@
 import React from "react";
-import { useToolkit } from "../../components";
 
 type CenterModalProps = {
 	children: React.ReactNode;
