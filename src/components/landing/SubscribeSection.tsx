@@ -8,7 +8,7 @@ const partnerImages = [
 
 const SubscribeSection = () => {
 	return (
-		<section className="centered pb-10 lg:pb-14 relative">
+		<section className="centered pb-10 lg:pb-14 px-6 lg:px-0 relative">
 			<img
 				src="/assets/images/landing/subscribe-decor.png"
 				alt="decor"
@@ -35,7 +35,7 @@ const SubscribeSection = () => {
 				})}
 			</div>
 
-			<div className="w-full relative rounded-tl-[50px] rounded-tr-3xl rounded-bl-2xl rounded-br-2xl flexed flex-col bg-[#DFD7F9] bg-opacity-40 min-h-[300px]">
+			<div className="w-full mt-12 lg:mt-0 relative rounded-tl-[50px] rounded-tr-3xl rounded-bl-2xl rounded-br-2xl flexed flex-col bg-[#DFD7F9] bg-opacity-40 min-h-[300px]">
 				<img
 					src="/assets/images/landing/sub-spiral-left.png"
 					alt="spiral"
@@ -72,7 +72,7 @@ const SubscribeSection = () => {
 					<input
 						placeholder="Your email"
 						type="text"
-						className="outline-none mr-7 mb-5 md:mb-0 w-[350px] p-4 pl-12 placeholder:lt-txt placeholder:text-sm font-serat text-[#39425D] bwite rounded-lg"
+						className="outline-none md:mr-7 mb-5 md:mb-0 w-[350px] p-4 pl-12 placeholder:lt-txt placeholder:text-sm font-serat text-[#39425D] bwite rounded-lg"
 					/>
 
 					<button

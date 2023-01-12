@@ -31,18 +31,17 @@ const Footer = () => {
 				<div className="w-full md:w-[20%]">
 					<p className="font-pop mb-4 med text-lg lg:text-4xl">Jadoo.</p>
 					<div className="med lt-txt text-sm">
-						Book your trip in minute, get full control for much longer.
+						Book your trip in minutes, get full control for much longer.
 					</div>
 				</div>
 				<div className="w-full md:w-[30%] flex-1 md:px-8 lg:px-14">
 					<div className="flect justify-between">
 						{footerLinks.map(({ title, children }: FooterLinkProps) => (
 							<div className="" key={title}>
-								<p className="mb-3 font-pop font-bold lg:text-lg">{title}</p>
-
+								<p className="mb-4 font-pop font-bold lg:text-lg">{title}</p>
 								<ul className="flex flex-col">
 									{children.map((item: string) => (
-										<li className="font-pop lt-txt mb-2 curp hover:underline">
+										<li className="font-pop lt-txt mb-2 curp hover:underline text-sm lg:text-[17px]">
 											{item}
 										</li>
 									))}
@@ -81,7 +80,9 @@ const Footer = () => {
 			</div>
 
 			<div className="w-full my-8 px-10 lg:px-0 ">
-				<p className="mb-0 font-pop lt-txt">All rights reserved@jadoo.co</p>
+				<p className="mb-0 font-pop lt-txt md:tcent">
+					All rights reserved@jadoo.co
+				</p>
 			</div>
 		</footer>
 	);
