@@ -9,7 +9,7 @@ type NavItemProps = {
 };
 
 const LandingNav = () => {
-	const { useAppSelector, dispatch } = useToolkit();
+	const { dispatch } = useToolkit();
 
 	const navLinks: NavItemProps[] = [
 		{ title: "Destinations" },
