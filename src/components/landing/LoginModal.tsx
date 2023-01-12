@@ -8,7 +8,7 @@ type ErrorProps = {
 };
 
 const LoginModal = () => {
-	const { useAppSelector, dispatch, useEffect, useState } = useToolkit();
+	const { useAppSelector, dispatch, useState } = useToolkit();
 	const { isLoginModalOpen } = useAppSelector((state) => state.auth);
 	const { loginUser, authLoading } = useAuth();
 
@@ -46,9 +46,6 @@ const LoginModal = () => {
 		} else if (!regex.test(values.email)) {
 			errors.email = "Invalid Email!";
 		}
-		// if (!values.password) {
-		// 	errors.password = "Password is required";
-		// }
 		return errors;
 	};
 
@@ -64,6 +61,7 @@ const LoginModal = () => {
 						<div className="field">
 							<label>Email</label>
 							<input
+								required
 								type="text"
 								name="email"
 								placeholder="Email"
@@ -76,6 +74,7 @@ const LoginModal = () => {
 						<div className="field">
 							<label>Password</label>
 							<input
+								required
 								type="password"
 								name="password"
 								placeholder="Password"

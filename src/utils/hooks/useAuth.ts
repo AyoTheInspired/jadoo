@@ -5,14 +5,7 @@ import {
 	db,
 	signOut,
 } from "../../firebase";
-import {
-	getFirestore,
-	query,
-	getDocs,
-	collection,
-	where,
-	addDoc,
-} from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import {
 	flipAuthModals,
 	setUser,

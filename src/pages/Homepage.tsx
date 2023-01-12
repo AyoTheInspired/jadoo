@@ -15,7 +15,7 @@ import {
 const Homepage = () => {
 	return (
 		<>
-			<main className="pt-5 lg:pt-10 flex items-center flex-col">
+			<main className="pt-5 lg:pt-8 flex items-center flex-col">
 				<LandingNav />
 				<HeroSection />
 				<Services />
