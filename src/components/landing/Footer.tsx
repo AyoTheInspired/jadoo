@@ -27,14 +27,14 @@ const socialImages = [
 const Footer = () => {
 	return (
 		<footer className="centered py-10 md:py-16 lg:py-20">
-			<div className="flex items-start md:justify-between flex-wrap lg:flex-nowrap px-10 lg:px-0 space-y-10 lg:space-y-0">
+			<div className="flex items-start md:justify-between flex-wrap lg:flex-nowrap px-10 lg:px-0 space-y-10 md:space-y-0">
 				<div className="w-full md:w-[20%]">
 					<p className="font-pop mb-4 med text-lg lg:text-4xl">Jadoo.</p>
 					<div className="med lt-txt text-sm">
 						Book your trip in minutes, get full control for much longer.
 					</div>
 				</div>
-				<div className="w-full md:w-[30%] flex-1 md:px-8 lg:px-14">
+				<div className="w-full flex-1 md:px-8 lg:px-14">
 					<div className="flect justify-between">
 						{footerLinks.map(({ title, children }: FooterLinkProps) => (
 							<div className="" key={title}>
@@ -50,7 +50,7 @@ const Footer = () => {
 						))}
 					</div>
 				</div>
-				<div className="w-full md:w-[20%]">
+				<div className="w-full md:w-[23%]">
 					<div className="flex mb-3 space-x-3">
 						{socialImages.map((item: string, idx) => (
 							<div key={idx}>
@@ -61,17 +61,17 @@ const Footer = () => {
 
 					<div className="flex flex-col">
 						<p className="lt-txt lg:text-lg font-pop">Discover our app</p>
-						<div className="flex space-x-3 mt-4">
+						<div className="flex space-x-2 mt-4 md:mr-5">
 							<img
 								src="/assets/images/landing/playstore-btn.png"
 								alt="store-btn"
-								width={100}
+								width={80}
 								className="curp"
 							/>
 							<img
 								src="/assets/images/landing/appstore-btn.png"
 								alt="store-btn"
-								width={100}
+								width={80}
 								className="curp"
 							/>
 						</div>
