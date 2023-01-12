@@ -1,9 +1,11 @@
 import { BsChevronDown } from "react-icons/bs";
 import useToolkit from "../../utils/hooks/useToolkit";
 import { NavItemProps } from "../../../types";
+import { IoMdMenu } from "react-icons/io";
+import { toggleMobileMenu } from "../../redux/slices/authSlice";
 
 const LandingNav = () => {
-	const { navLinks } = useToolkit();
+	const { navLinks, dispatch } = useToolkit();
 
 	return (
 		<nav className="bg-transparent fitted z-20 absolute h-12 flex-btw centered">
@@ -23,6 +25,13 @@ const LandingNav = () => {
 					EN <BsChevronDown className="ml-1.5" />
 				</li>
 			</ul>
+
+			<div className="lg:hidden pr-8">
+				<IoMdMenu
+					onClick={() => dispatch(toggleMobileMenu())}
+					className="text-2xl curp"
+				/>
+			</div>
 		</nav>
 	);
 };

@@ -53,6 +53,7 @@ const useAuth = () => {
 			const res = await signInWithEmailAndPassword(auth, email, password);
 			const userEmail = res?.user?.email || "";
 			alert("Login successful");
+			dispatch(toggleLoginModal());
 			dispatch(setUser(userEmail));
 			setAuthLoading(!authLoading);
 		} catch (err) {

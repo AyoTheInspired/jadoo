@@ -4,12 +4,14 @@ interface userState {
 	user: null | string;
 	isLoginModalOpen: boolean;
 	isRegModalOpen: boolean;
+	isMobileMenuOpen: boolean;
 }
 
 const initialState: userState = {
 	user: null,
 	isLoginModalOpen: false,
 	isRegModalOpen: false,
+	isMobileMenuOpen: false,
 };
 
 const authSlice = createSlice({
@@ -45,6 +47,13 @@ const authSlice = createSlice({
 			};
 		},
 
+		toggleMobileMenu: (state) => {
+			return {
+				...state,
+				isMobileMenuOpen: !state.isMobileMenuOpen,
+			};
+		},
+
 		flipAuthModals: (state) => {
 			return {
 				...state,
@@ -61,6 +70,7 @@ export const {
 	toggleLoginModal,
 	toggleRegModal,
 	flipAuthModals,
+	toggleMobileMenu,
 } = authSlice.actions;
 
 export default authSlice.reducer;

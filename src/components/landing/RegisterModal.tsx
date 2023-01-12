@@ -29,9 +29,7 @@ const RegModal = () => {
 		e.preventDefault();
 		setFormErrors(validate(formValues));
 
-		if (formErrors.email === null && formErrors.password === null)
-			console.log("formErrors :>> ", formErrors);
-		registerUser(email, password);
+		if (email?.length && password?.length === 6) registerUser(email, password);
 	};
 
 	const validate = (values: ErrorProps) => {
@@ -65,6 +63,7 @@ const RegModal = () => {
 						<div className="field">
 							<label>Email</label>
 							<input
+								required
 								type="text"
 								name="email"
 								placeholder="Email"
@@ -77,6 +76,7 @@ const RegModal = () => {
 						<div className="field">
 							<label>Password</label>
 							<input
+								required
 								type="password"
 								name="password"
 								placeholder="Password"
@@ -98,7 +98,7 @@ const RegModal = () => {
 							Already have an account? &nbsp;
 							<span
 								onClick={() => dispatch(flipAuthModals())}
-								className="underline smb text-black">
+								className="underline curp smb text-black">
 								Login
 							</span>
 						</p>

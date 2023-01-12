@@ -97,7 +97,7 @@ const LoginModal = () => {
 							Don't have an account? &nbsp;
 							<span
 								onClick={() => dispatch(flipAuthModals())}
-								className="underline smb text-black">
+								className="underline curp smb text-black">
 								Register
 							</span>
 						</p>

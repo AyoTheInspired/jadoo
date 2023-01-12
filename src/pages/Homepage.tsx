@@ -9,6 +9,7 @@ import {
 	Footer,
 	LoginModal,
 	RegisterModal,
+	MobileNavigation,
 } from "../components";
 
 const Homepage = () => {
@@ -26,6 +27,7 @@ const Homepage = () => {
 			</main>
 			<RegisterModal />
 			<LoginModal />
+			<MobileNavigation />
 		</>
 	);
 };
