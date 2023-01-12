@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { CenterModal, useAuth, useToolkit } from "../../components";
+import { CenterModal, useToggle, useAuth, useToolkit } from "../../components";
 import { flipAuthModals, toggleLoginModal } from "../../redux/slices/authSlice";
 
 type ErrorProps = {
@@ -8,6 +8,7 @@ type ErrorProps = {
 };
 
 const LoginModal = () => {
+	const { ToggleButton, pwdShown } = useToggle();
 	const { useAppSelector, dispatch, useState } = useToolkit();
 	const { isLoginModalOpen } = useAppSelector((state) => state.auth);
 	const { loginUser, authLoading } = useAuth();
@@ -71,17 +72,18 @@ const LoginModal = () => {
 							/>
 							<p className="error-txt">{formErrors?.email}</p>
 						</div>
-						<div className="field">
+						<div className="field relative">
 							<label>Password</label>
 							<input
 								required
-								type="password"
+								type={pwdShown ? "text" : "password"}
 								name="password"
 								placeholder="Password"
 								className="form-input"
 								value={formValues.password}
 								onChange={handleChange}
-							/>
+							/>{" "}
+							<ToggleButton />
 							<p className="error-txt">{formErrors.password}</p>
 						</div>
 						{authLoading ? (

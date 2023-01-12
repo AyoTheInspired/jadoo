@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { CenterModal, useAuth, useToolkit } from "..";
+import { CenterModal, useAuth, useToggle, useToolkit } from "../../components";
 import { flipAuthModals, toggleRegModal } from "../../redux/slices/authSlice";
 
 type ErrorProps = {
@@ -8,6 +8,8 @@ type ErrorProps = {
 };
 
 const RegModal = () => {
+	const { ToggleButton, pwdShown } = useToggle();
+
 	const { useAppSelector, dispatch, useState } = useToolkit();
 	const { isRegModalOpen } = useAppSelector((state) => state.auth);
 	const { registerUser, authLoading } = useAuth();
@@ -77,13 +79,14 @@ const RegModal = () => {
 							<label>Password</label>
 							<input
 								required
-								type="password"
+								type={pwdShown ? "text" : "password"}
 								name="password"
 								placeholder="Password"
 								className="form-input"
 								value={formValues.password}
 								onChange={handleChange}
 							/>
+							<ToggleButton />
 							<p className="error-txt">{formErrors.password}</p>
 						</div>
 						{authLoading ? (

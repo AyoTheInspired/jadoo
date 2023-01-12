@@ -10,6 +10,7 @@ export { default as RegisterModal } from "./landing/RegisterModal";
 export { default as Footer } from "./landing/Footer";
 export { default as MobileNavigation } from "./landing/MobileNavigation";
 
+export { default as useToggle } from "./misc/useToggle";
 export { default as CenterModal } from "./misc/CenterModal";
 
 // hooks
