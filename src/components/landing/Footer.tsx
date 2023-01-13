@@ -26,7 +26,7 @@ const socialImages = [
 
 const Footer = () => {
 	return (
-		<footer className="centered py-10 md:py-16 lg:py-20">
+		<footer className="centered py-10 md:py-10 lg:py-14">
 			<div className="flex items-start md:justify-between flex-wrap lg:flex-nowrap px-10 lg:px-0 space-y-10 md:space-y-0">
 				<div className="w-full md:w-[20%]">
 					<p className="font-pop mb-4 med text-lg lg:text-4xl">Jadoo.</p>

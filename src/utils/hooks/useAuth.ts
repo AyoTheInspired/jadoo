@@ -20,7 +20,7 @@ const useAuth = () => {
 
 	const registerUser = async (email: string, password: string) => {
 		console.log("reg running");
-		setAuthLoading(!authLoading);
+		setAuthLoading(true);
 		try {
 			await createUserWithEmailAndPassword(auth, email, password);
 			await addDoc(collection(db, "users"), {
@@ -29,9 +29,8 @@ const useAuth = () => {
 				email,
 			});
 
-			setAuthLoading(!authLoading);
 			alert("Registration successful");
-			setAuthLoading(!authLoading);
+			setAuthLoading(false);
 			dispatch(flipAuthModals());
 		} catch (err) {
 			setAuthLoading(false);
@@ -40,7 +39,7 @@ const useAuth = () => {
 	};
 
 	const loginUser = async (email: string, password: string) => {
-		setAuthLoading(!authLoading);
+		setAuthLoading(true);
 
 		try {
 			const res = await signInWithEmailAndPassword(auth, email, password);
@@ -48,7 +47,7 @@ const useAuth = () => {
 			alert("Login successful");
 			dispatch(toggleLoginModal());
 			dispatch(setUser(userEmail));
-			setAuthLoading(!authLoading);
+			setAuthLoading(false);
 		} catch (err) {
 			setAuthLoading(false);
 			alert(err);

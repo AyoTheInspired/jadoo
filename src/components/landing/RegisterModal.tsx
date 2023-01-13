@@ -75,7 +75,7 @@ const RegModal = () => {
 							/>
 							<p className="error-txt">{formErrors?.email}</p>
 						</div>
-						<div className="field">
+						<div className="field relative">
 							<label>Password</label>
 							<input
 								required
